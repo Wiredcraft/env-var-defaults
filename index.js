@@ -1,12 +1,13 @@
 'use strict';
 
-var Register = require('file-register');
+const path = require('path');
+const Register = require('file-register');
 
 // The lib.
-var lib = Register();
+const lib = Register();
 
 // Register files.
-lib.register('./lib');
+lib.register(path.resolve(__dirname, 'lib'));
 
 // Export.
 module.exports = lib;
